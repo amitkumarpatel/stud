@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  houseno: 1
+  address: MyText
+  owner: MyString
+
+two:
+  houseno: 1
+  address: MyText
+  owner: MyString

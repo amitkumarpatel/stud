@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<h2 align='right'><%= link_to 'Add Members to House', :controller=>'person',:action=>'new',:id=>@h.id %></h2>
+<h2><center>Check The Members</center></h2>
+
+<center><table border=1>
+  <tr>
+    <th>Member Name</th><td></td>
+    <th>Title</th><td></td>
+    <th>Phone Number</th><td></td>
+ 
+  </tr>
+
+<% @per.each do |h| %>
+  <tr>
+    <td><%= h.name %></td><td></td>
+    <td><%= h.title %></td><td></td>
+    <td><%= h.phone %></td><td></td>
+    <td><%#= link_to 'Show', house %></td>
+    <td><%= link_to 'Change Member Details',:controller=>'person',:action=>'edit',:id=> h.id  %></td><td></td>
+    <td><%= link_to 'Destroy Details', :controller=>'person',:action=>'delete',:id=> h.id %></td><td></td>
+    <%#= link_to 'Destroy', house, confirm: 'Are you sure?', method: :delete %>
+  </tr>
+<% end %>
+
+</table></center>
+
+
+<h3 ><%= link_to 'Back to House ', :controller=>'houses',:action=>'show',:id=>@h.id %></h3>

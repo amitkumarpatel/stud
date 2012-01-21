@@ -1,0 +1,25 @@
+<%=flash[:notice]%>
+
+<h1>Enter the Member Details</h1>
+<%= form_for (@per), :url=>{:action=>'create',:id=>@h.id} do |f| %>
+ <font color="red"> <%= f.error_messages %></font>
+<center>
+  <div class="field">
+    <%= f.label :Name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :Phone  %><br />
+    <%= f.number_field :phone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div></center>
+<% end %>
+
+
+<%= link_to 'Back to Details', :action =>'show',:id=>@h.id %></h3>

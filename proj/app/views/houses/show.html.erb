@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<center><h2><u>Details</u></h2>
+<h3><p><ul>
+  <li><b>Houseno:</b>
+  <%= @house.houseno %>
+</p></li>
+<p><li>
+  <b>Owner:</b>
+  <%= @house.owner %>
+</p></li>
+<p><li>
+  <b>Address line 1 :</b>
+  <%= @house.address1 %>
+</p></li>
+<p><li>
+  <b>Address line 2 :</b>
+  <%= @house.address2 %>
+</p></li>
+<p><li>
+  <b>Address line 3 :</b>
+  <%= @house.address3 %>
+</p></li>
+<p><li>
+  <b>Address line 4 :</b>
+  <%= @house.address4 %>
+</p></li>
+<p><li>
+  <b>Pin No  :</b>
+  <%= @house.pinno %>
+</p></li>
+
+</ol>
+
+</center>
+
+<h3><%= link_to 'Change House Details', edit_house_path(@house) %> |
+<%= link_to 'Back to Index', houses_path %></h3>
+<h2 align="right"><%= link_to 'Check Out The Member',:controller=>'person',:action =>'show',:id=>@house.id  %> </h2></h3>

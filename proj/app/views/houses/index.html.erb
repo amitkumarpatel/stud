@@ -1,0 +1,29 @@
+<center>
+<h1>Listing houses</h1>
+<table border=1>
+  <tr>
+    <th><b><h2><u>Houseno</u></h2></b></th>
+    <th></th>
+    <th><b><h2><u>Owner</u></b><h2></th>
+    
+  </tr>
+
+<% @houses.each do |house| %>
+  <tr>
+
+    <td><b><%= link_to house.houseno ,:controller=>'person',:action =>'show',:id=>house.id %></b></td>
+    <td><b><%#= house.address1 %></b></td>
+    <td><b><%= house.owner %></b></td>    <td></td>  <td></td>
+    <td><b><%= link_to 'Get Details   ', house %></b></td>
+    <td></td>  <td></td>
+    <td><b><%= link_to 'Change the Details   ', edit_house_path(house) %></b></td>    <td></td>  <td></td>
+    <td><b><%= link_to 'Remove The House ', house, confirm: 'Are you sure?', method: :delete %></b></td>
+  </tr>
+<% end %>
+</table>
+</center>
+<br />
+
+<h2><%= link_to 'Add New House', new_house_path %></h2>
+
+<h3 align="right"><%= link_to 'Back To the Home Page', :action=>'home' %></h3>
